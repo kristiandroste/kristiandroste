@@ -7,9 +7,6 @@ I create things at the intersection of computers, brains, art, and finance. Curr
 **[IntoMind](https://www.intomind.com)**
 Noninvasive brain-computer interfaces. Custom EEG hardware, signal processing, neural decoding.
 
-**[KrakenSpreads](https://krakenspreads.com)**
-Crypto market making for retail users. Built-in loss safeguards and risk configuration. Bid-ask spread scanner.
-
 **[ethereum.miami](https://ethereum.miami)**
 Daily Ethereum intelligence distributed across web, newsletter, and social channels. Fully automated content and advertising platform.
 
@@ -18,9 +15,6 @@ The Turf Metaverse, a blockchain gaming economy. ETH-generating gameplay, charac
 
 **[BasicSwap Orderbook API](https://basicswap.bid)**
 Decentralized atomic swap exchange interface. Live offers and price data on cross-chain trades, no intermediaries.
-
-**[TarotDream](https://tarotdream.com)**
-Evocative tarot readings with generative interpretations. Full SaaS with tiered subscriptions.
 
 **[MindMap Minion](https://mindmapminion.com)**
 LLM-powered mind map generator. Topic or PDF in, visual diagram out.
