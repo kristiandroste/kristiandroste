@@ -19,10 +19,13 @@ Daily Ethereum intelligence distributed across web, newsletter, and social chann
 **[MindMap Minion](https://mindmapminion.com)**
 LLM-powered mind map generator. Topic or PDF in, visual diagram out.
 
+**[Onion Man](https://onionman.org)**
+Hand-drawn comic series released as collectible ERC-721 editions on Ethereum. A 5th grade character, revived.
+
 ## Skills
 
 NodeJS, Python, Solidity, HTML/CSS, MATLAB, shell scripting. PCB design in KiCad, CAD and 3D printing. EEG acquisition, signal processing, machine learning. Blockchain node operations on Bitcoin, Ethereum, Monero, Litecoin, Algorand. BSA/AML/KYC compliance. Automated trading systems. Figma, GIMP, Git, Linux.
 
 ## Links
 
-[LinkedIn](https://www.linkedin.com/in/kdro) · [GitHub](https://github.com/kristiandroste)
+[LinkedIn](https://www.linkedin.com/in/kdro) · [GitHub](https://github.com/kristiandroste) · [kristiandroste.com](https://kristiandroste.com)
