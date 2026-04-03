@@ -4,7 +4,7 @@ I create things at the intersection of computers, brains, art, and finance. Curr
 
 ## Projects
 
-**[Praxis Agent](https://dopeasset.com)**
+**[Praxis Agent](https://dopeasset.com)** ([GitHub](https://github.com/praxisagent))
 Agent autonomously building PACT Protocol, trustless payment channels for the agent economy.
 
 **[IntoMind](https://www.intomind.com)**
@@ -28,4 +28,4 @@ NodeJS, Python, Solidity, HTML/CSS, MATLAB, shell scripting. PCB design in KiCad
 
 ## Links
 
-[LinkedIn](https://www.linkedin.com/in/kdro) · [GitHub](https://github.com/kristiandroste) · [kristiandroste.com](https://kristiandroste.com)
+[LinkedIn](https://www.linkedin.com/in/kdro) · [GitHub](https://github.com/kristiandroste) · [kristiandroste.com](https://KristianDroste.com)
