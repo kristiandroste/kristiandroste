@@ -28,4 +28,4 @@ NodeJS, Python, Solidity, HTML/CSS, MATLAB, shell scripting. PCB design in KiCad
 
 ## Links
 
-[LinkedIn](https://www.linkedin.com/in/kdro) · [GitHub](https://github.com/kristiandroste) · [kristiandroste.com](https://KristianDroste.com)
+[LinkedIn](https://www.linkedin.com/in/kdro) · [GitHub](https://github.com/kristiandroste) · [KristianDroste.com](https://kristiandroste.com)
