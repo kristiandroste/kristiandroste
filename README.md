@@ -1,11 +1,13 @@
 # Kristian Droste
 
-I create things at the intersection of computers, brains, art, and finance. Currently running a neurotechnology company and shipping agentic products. Previously led compliance at Kraken and conducted intracranial research at Dartmouth.
+I create things at the intersection of computers and brains.
 
-## Dev
+## Corp
 
 **[IntoMind](https://www.intomind.com)**
 Noninvasive brain-computer interfaces. Custom EEG hardware, neural decoding, and agentic systems.
+
+## Dev
 
 **[MindMap Minion](https://mindmapminion.com)**
 LLM-powered mind map generator. Topic or PDF in, visual diagram and study tools out.
