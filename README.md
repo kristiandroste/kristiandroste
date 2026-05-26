@@ -5,10 +5,13 @@ I create things at the intersection of computers, brains, art, and finance. Curr
 ## Dev
 
 **[IntoMind](https://www.intomind.com)**
-Noninvasive brain-computer interfaces. Custom EEG hardware, signal processing, neural decoding.
+Noninvasive brain-computer interfaces. Custom EEG hardware, neural decoding, and agentic systems.
 
 **[MindMap Minion](https://mindmapminion.com)**
 LLM-powered mind map generator. Topic or PDF in, visual diagram and study tools out.
+
+**[Meturferse](https://meturferse.com)**
+Pixel-powered community revival of a small corner of the metaverse. Built on the original Turf Plots ERC-721 tokens. 
 
 ## Skills
 
