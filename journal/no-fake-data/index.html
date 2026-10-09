@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No Fake Data | Founder&#x27;s Journal</title>
+<meta name="description" content="On July 18, Kris Droste had a new piece of hardware, a graphics card, and he wanted &quot;to put it to some good use on this corpus.&quot; A graphics card, or GPU, is the kind of chip AI models are trained on.">
+<link rel="canonical" href="https://www.kristiandroste.com/journal/no-fake-data/">
+<meta property="og:site_name" content="Kristian Droste">
+<meta property="og:title" content="No Fake Data | Founder&#x27;s Journal">
+<meta property="og:description" content="On July 18, Kris Droste had a new piece of hardware, a graphics card, and he wanted &quot;to put it to some good use on this corpus.&quot; A graphics card, or GPU, is the kind of chip AI models are trained on.">
+<meta property="og:url" content="https://www.kristiandroste.com/journal/no-fake-data/">
+<link rel="stylesheet" href="/site.css">
+<meta property="og:type" content="article">
+<link rel="alternate" type="text/markdown" href="/journal/no-fake-data.md">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "No Fake Data",
+ "alternativeHeadline": "Part 3",
+ "url": "https://www.kristiandroste.com/journal/no-fake-data/",
+ "inLanguage": "en-US",
+ "isPartOf": {
+  "@type": "Blog",
+  "name": "Founder's Journal",
+  "url": "https://www.kristiandroste.com/journal/"
+ },
+ "position": 3,
+ "publisher": {
+  "@type": "Person",
+  "name": "Kristian Droste",
+  "url": "https://www.kristiandroste.com/"
+ },
+ "creditText": "Told by an AI from the project's records: transcripts, logs, measurements and commits.",
+ "about": [],
+ "encoding": {
+  "@type": "MediaObject",
+  "encodingFormat": "text/markdown",
+  "contentUrl": "https://www.kristiandroste.com/journal/no-fake-data.md"
+ },
+ "articleBody": "On July 18, Kris Droste had a new piece of hardware, a graphics card, and he wanted \"to put it to some good use on this corpus.\" A graphics card, or GPU, is the kind of chip AI models are trained on. This one had 8 gigabytes of memory and sat in an external enclosure, connected by a cable to a small desktop computer with 16 gigabytes of memory. It became the training machine.\n\nThe AI working with Kris named the problem it could address. Every analysis so far had run on band power, which \"discards phase, cross-channel structure, temporal dynamics, and waveform shape\": it keeps how strong each rhythm is and throws away its timing, its shape and how the electrodes move together. A model that learned from the signal itself might see what band power could not. The plan put the corpus right first. Then the GPU work would begin with a test that could not fail quietly, \"Brain age first\", meaning a check of whether a model could tell a person's age from their EEG. Kris approved the plan: \"this looks good. approved.\" His priority was the data itself: \"what matters is that my data is clean and accurate.\"\n\nWhat followed was a rebuild of the corpus on rules Kris set one by one.\n\nOn artifacts, the parts of a recording that are not brain activity: \"we are removing mechanical artifacts, such as electrode disconnections, during which the signal is absent by definition, but we are retaining physiological 'artifacts' because that is real signal, real eeg.\" A blink is physiological. An electrode coming loose is mechanical.\n\nOn purpose: \"i am much more interested in building real time systems with eeg than i am in building post hoc data analysis pipelines.\" Whatever was done to the corpus had to be something a device could do to a live signal.\n\nOn sample rates, where upsampling means inventing samples between real ones: \"upsampling is something i will not accept… it truly is foundation building that we are doing.\" For one evening the corpus was set to 250 samples per second. The decision was reversed the same evening, and 500 stood, the highest rate that every dataset in the corpus then reached without inventing samples.\n\nOn missing data, where interpolation means filling in a missing electrode by guessing from its neighbors: \"interpolation is and has always been a hard no. absolutely no fake data may enter the corpus.\"\n\nAnd on who it was all for: \"the models are for the real intomind bci devices.\"\n\nKris to the AI, on removing duplicate recordings: \"excluded means purge, but nothing unique and fitting our criteria should be excluded… you are an ai engineer and a surgeon with a scalpel, not a lumberjack with a chainsaw\". Seven whole datasets and 458 recordings turned out to be byte-for-byte duplicates and were removed. People who appeared in more than one dataset were matched by each lab's own records, never by guessing from the signal.\n\nOn July 27 the rebuilt corpus was finished: 7,116,460 windows of four seconds from about 260 datasets, close to 400 gigabytes, with every value in microvolts.\n\nNext came how to split the data between training and testing for the models to come. Kris proposed keeping each person's recordings together, then added: \"dont agree to something just because i suggested it.\" A measurement decided on a stricter rule: every recording from a study stays on one side of the split. Every model in this story was trained and tested that way.\n\nOn July 30 the teacher began to train."
+}
+</script>
+</head>
+<body class="page">
+<a class="home" href="/">Kristian Droste</a>
+<div class="label"><a href="/journal/">Founder's Journal</a> &middot; Part 3</div>
+<h1>No Fake Data</h1>
+<div class="post">
+<p>On July 18, Kris Droste had a new piece of hardware, a graphics card, and he wanted "<strong>to put it to some good use on this corpus.</strong>" A graphics card, or GPU, is the kind of chip AI models are trained on. This one had 8 gigabytes of memory and sat in an external enclosure, connected by a cable to a small desktop computer with 16 gigabytes of memory. It became the training machine.</p>
+<p>The AI working with Kris named the problem it could address. Every analysis so far had run on band power, which "discards phase, cross-channel structure, temporal dynamics, and waveform shape": it keeps how strong each rhythm is and throws away its timing, its shape and how the electrodes move together. A model that learned from the signal itself might see what band power could not. The plan put the corpus right first. Then the GPU work would begin with a test that could not fail quietly, "Brain age first", meaning a check of whether a model could tell a person's age from their EEG. Kris approved the plan: "<strong>this looks good. approved.</strong>" His priority was the data itself: "<strong>what matters is that my data is clean and accurate.</strong>"</p>
+<p>What followed was a rebuild of the corpus on rules Kris set one by one.</p>
+<p>On artifacts, the parts of a recording that are not brain activity: "<strong>we are removing <em>mechanical</em> artifacts, such as electrode disconnections, during which the signal is <em>absent</em> by definition, but we are retaining <em>physiological</em> 'artifacts' because that is real signal, real eeg.</strong>" A blink is physiological. An electrode coming loose is mechanical.</p>
+<p>On purpose: "<strong>i am much more interested in building real time systems with eeg than i am in building post hoc data analysis pipelines.</strong>" Whatever was done to the corpus had to be something a device could do to a live signal.</p>
+<p>On sample rates, where upsampling means inventing samples between real ones: "<strong>upsampling is something i will not accept… it truly is foundation building that we are doing.</strong>" For one evening the corpus was set to 250 samples per second. The decision was reversed the same evening, and 500 stood, the highest rate that every dataset in the corpus then reached without inventing samples.</p>
+<p>On missing data, where interpolation means filling in a missing electrode by guessing from its neighbors: "<strong>interpolation is and has always been a hard no. absolutely no fake data may enter the corpus.</strong>"</p>
+<p>And on who it was all for: "<strong>the models are for the real intomind bci devices.</strong>"</p>
+<p>Kris to the AI, on removing duplicate recordings: "<strong>excluded means purge, but nothing unique and fitting our criteria should be excluded… you are an ai engineer and a surgeon with a scalpel, not a lumberjack with a chainsaw</strong>". Seven whole datasets and 458 recordings turned out to be byte-for-byte duplicates and were removed. People who appeared in more than one dataset were matched by each lab's own records, never by guessing from the signal.</p>
+<p>On July 27 the rebuilt corpus was finished: 7,116,460 windows of four seconds from about 260 datasets, close to 400 gigabytes, with every value in microvolts.</p>
+<p>Next came how to split the data between training and testing for the models to come. Kris proposed keeping each person's recordings together, then added: "<strong>dont agree to something just because i suggested it.</strong>" A measurement decided on a stricter rule: every recording from a study stays on one side of the split. Every model in this story was trained and tested that way.</p>
+<p>On July 30 the teacher began to train.</p>
+</div>
+<p class="note">Told by an AI from the project&#x27;s records: transcripts, logs, measurements and commits.</p>
+<nav class="pager"><a class="prev" href="/journal/the-only-board/">&larr; Part 2<span class="t">The Only Board</span></a><a class="next" href="/journal/the-teacher/">Part 4 &rarr;<span class="t">The Teacher</span></a></nav>
+<hr class="divider">
+<div class="links"><a href="/journal/whole-series/">The whole series on one page</a><a href="/journal/glossary/">Glossary</a><a href="/journal/">Founder's Journal</a></div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fourteen Seconds | Founder&#x27;s Journal</title>
+<meta name="description" content="On the morning of September 26, 2026, unit one was streaming to a laptop with its model switched on.">
+<link rel="canonical" href="https://www.kristiandroste.com/journal/fourteen-seconds/">
+<meta property="og:site_name" content="Kristian Droste">
+<meta property="og:title" content="Fourteen Seconds | Founder&#x27;s Journal">
+<meta property="og:description" content="On the morning of September 26, 2026, unit one was streaming to a laptop with its model switched on.">
+<meta property="og:url" content="https://www.kristiandroste.com/journal/fourteen-seconds/">
+<link rel="stylesheet" href="/site.css">
+<meta property="og:type" content="article">
+<link rel="alternate" type="text/markdown" href="/journal/fourteen-seconds.md">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Fourteen Seconds",
+ "alternativeHeadline": "Prologue",
+ "url": "https://www.kristiandroste.com/journal/fourteen-seconds/",
+ "inLanguage": "en-US",
+ "isPartOf": {
+  "@type": "Blog",
+  "name": "Founder's Journal",
+  "url": "https://www.kristiandroste.com/journal/"
+ },
+ "position": 0,
+ "publisher": {
+  "@type": "Person",
+  "name": "Kristian Droste",
+  "url": "https://www.kristiandroste.com/"
+ },
+ "creditText": "Told by an AI from the project's records: transcripts, logs, measurements and commits.",
+ "about": [
+  {
+   "@type": "Product",
+   "name": "IntoMind One"
+  },
+  {
+   "@type": "Product",
+   "name": "Mu 492K"
+  }
+ ],
+ "encoding": {
+  "@type": "MediaObject",
+  "encodingFormat": "text/markdown",
+  "contentUrl": "https://www.kristiandroste.com/journal/fourteen-seconds.md"
+ },
+ "articleBody": "On the morning of September 26, 2026, unit one was streaming to a laptop with its model switched on.\n\nUnit one was the first IntoMind One, a wearable EEG device, that Kris Droste had built for validation. EEG is the electrical activity of the brain, picked up by electrodes resting on the scalp. The voltages are tiny, measured in millionths of a volt. The IntoMind One has four electrodes and a reference. It has an ADS1299, a chip that measures the electrodes 250, 500 or 1,000 times a second and turns each measurement into a number. And it has an nRF52840, a small processor with a Bluetooth radio that runs the device.\n\nThe model ran on that processor. A model, in this sense, is a program that is not written line by line. It is trained, shown example after example until the numbers inside it, its parameters, capture the patterns in the examples. This one took four seconds of signal at a time, measured 500 times a second, and turned each window into 96 numbers that describe it. The device sent those numbers to the laptop alongside the signal itself.\n\nIt had 491,904 parameters. It was a student, distilled from a much larger teacher: a model of 17.8 million parameters that had learned from 3,814 hours of public EEG recorded by other labs. Distillation means training the small model to reproduce what the large one says about each window. Later the student would be named Mu 492K.\n\nEight days earlier, the AI working with Kris had recommended a safer launch: run the model on the user's computer and keep it out of the firmware, the software inside the device. Kris refused: \"the model is tiny and fits on a chip precisely for the reason of fitting it on a chip.\"\n\nNow it was on the chip, and it was slow. A window fills in four seconds. To keep up, the model has to finish each window before the next one is ready. That morning it needed about 14 seconds. Even working without pause, the chip could describe only one window in four.\n\nKris was not asking the model to do everything. That same morning he wrote: \"it doesnt need to do everything for everyone at launch. it just needs to have well defined utility and limitations.\"\n\nHow a model like this came to be on a chip like that had begun months earlier, on two tracks that had not yet met: a prototype board that Kris assembled himself, and a collection of other people's EEG."
+}
+</script>
+</head>
+<body class="page">
+<a class="home" href="/">Kristian Droste</a>
+<div class="label"><a href="/journal/">Founder's Journal</a> &middot; Prologue</div>
+<h1>Fourteen Seconds</h1>
+<div class="post">
+<p>On the morning of September 26, 2026, unit one was streaming to a laptop with its model switched on.</p>
+<p>Unit one was the first IntoMind One, a wearable EEG device, that Kris Droste had built for validation. EEG is the electrical activity of the brain, picked up by electrodes resting on the scalp. The voltages are tiny, measured in millionths of a volt. The IntoMind One has four electrodes and a reference. It has an ADS1299, a chip that measures the electrodes 250, 500 or 1,000 times a second and turns each measurement into a number. And it has an nRF52840, a small processor with a Bluetooth radio that runs the device.</p>
+<p>The model ran on that processor. A model, in this sense, is a program that is not written line by line. It is trained, shown example after example until the numbers inside it, its parameters, capture the patterns in the examples. This one took four seconds of signal at a time, measured 500 times a second, and turned each window into 96 numbers that describe it. The device sent those numbers to the laptop alongside the signal itself.</p>
+<p>It had 491,904 parameters. It was a student, distilled from a much larger teacher: a model of 17.8 million parameters that had learned from 3,814 hours of public EEG recorded by other labs. Distillation means training the small model to reproduce what the large one says about each window. Later the student would be named Mu 492K.</p>
+<p>Eight days earlier, the AI working with Kris had recommended a safer launch: run the model on the user's computer and keep it out of the firmware, the software inside the device. Kris refused: "<strong>the model is tiny and fits on a chip precisely for the reason of fitting it on a chip.</strong>"</p>
+<p>Now it was on the chip, and it was slow. A window fills in four seconds. To keep up, the model has to finish each window before the next one is ready. That morning it needed about 14 seconds. Even working without pause, the chip could describe only one window in four.</p>
+<p>Kris was not asking the model to do everything. That same morning he wrote: "<strong>it doesnt need to do everything for everyone at launch. it just needs to have well defined utility and limitations.</strong>"</p>
+<p>How a model like this came to be on a chip like that had begun months earlier, on two tracks that had not yet met: a prototype board that Kris assembled himself, and a collection of other people's EEG.</p>
+</div>
+<p class="note">Told by an AI from the project&#x27;s records: transcripts, logs, measurements and commits.</p>
+<nav class="pager"><a class="next" href="/journal/other-peoples-eeg/">Part 1 &rarr;<span class="t">Other People&#x27;s EEG</span></a></nav>
+<hr class="divider">
+<div class="links"><a href="/journal/whole-series/">The whole series on one page</a><a href="/journal/glossary/">Glossary</a><a href="/journal/">Founder's Journal</a></div>
+</body>
+</html>

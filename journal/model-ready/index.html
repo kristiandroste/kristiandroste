@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model Ready | Founder&#x27;s Journal</title>
+<meta name="description" content="The student had been waiting on the training machine since August.">
+<link rel="canonical" href="https://www.kristiandroste.com/journal/model-ready/">
+<meta property="og:site_name" content="Kristian Droste">
+<meta property="og:title" content="Model Ready | Founder&#x27;s Journal">
+<meta property="og:description" content="The student had been waiting on the training machine since August.">
+<meta property="og:url" content="https://www.kristiandroste.com/journal/model-ready/">
+<link rel="stylesheet" href="/site.css">
+<meta property="og:type" content="article">
+<link rel="alternate" type="text/markdown" href="/journal/model-ready.md">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Model Ready",
+ "alternativeHeadline": "Part 8",
+ "url": "https://www.kristiandroste.com/journal/model-ready/",
+ "inLanguage": "en-US",
+ "isPartOf": {
+  "@type": "Blog",
+  "name": "Founder's Journal",
+  "url": "https://www.kristiandroste.com/journal/"
+ },
+ "position": 8,
+ "publisher": {
+  "@type": "Person",
+  "name": "Kristian Droste",
+  "url": "https://www.kristiandroste.com/"
+ },
+ "creditText": "Told by an AI from the project's records: transcripts, logs, measurements and commits.",
+ "about": [
+  {
+   "@type": "Product",
+   "name": "Mu 171K"
+  }
+ ],
+ "encoding": {
+  "@type": "MediaObject",
+  "encodingFormat": "text/markdown",
+  "contentUrl": "https://www.kristiandroste.com/journal/model-ready.md"
+ },
+ "articleBody": "The student had been waiting on the training machine since August. As unit one came together, Kris Droste brought it into the launch: \"we can also consider including the tiny foundation model in this initial firmware release as something that devs can build on.\"\n\nThe AI recommended against putting it on the device at launch, for robustness, and suggested running it on the user's computer instead. Kris's answer, quoted at the start of this story, was that the model \"fits on a chip precisely for the reason of fitting it on a chip.\"\n\nOn September 19 the software around the device took the GNU Affero General Public License, a copyleft license that keeps derived work open, with commercial licenses available. The AI had suggested Apache, a license with fewer conditions. Kris: \"huh? i said copy left not apache.\"\n\nThe firmware's version of the model has to give the same answers as the training code. For the model the device runs today, Mu 171K, the check was run on a computer on October 4, with the learned numbers stored at 8 bits each exactly as the device holds them. The two agree to a cosine similarity of 1.000000000 over 16 test windows, a score on which 1 is a perfect match, and no number differs by more than 0.0000004.\n\nOn September 20, reviewing the firmware's design, the AI proposed taking the model out. Kris: \"you cannot just haphazard propose something like 'remove the ai foundation model'! what are you even thinking? you are drifting.\"\n\nThen the pieces came together. Firmware 1.0.1, on September 24, proved that signed updates worked, and unit one passed its acceptance test five times out of five. Firmware 1.1.0, on September 25, moved the filters that clean the signal onto the device, and the device declares them in the data it sends. The heads, the small add-ons that turn the model's numbers into answers, would be open for anyone to train and load.\n\nOn September 25, for the first time, a unit carried the model and ran it, and the firmware reported the model ready.\n\nThe next morning, the model needed fourteen seconds per window."
+}
+</script>
+</head>
+<body class="page">
+<a class="home" href="/">Kristian Droste</a>
+<div class="label"><a href="/journal/">Founder's Journal</a> &middot; Part 8</div>
+<h1>Model Ready</h1>
+<div class="post">
+<p>The student had been waiting on the training machine since August. As unit one came together, Kris Droste brought it into the launch: "<strong>we can also consider including the tiny foundation model in this initial firmware release as something that devs can build on.</strong>"</p>
+<p>The AI recommended against putting it on the device at launch, for robustness, and suggested running it on the user's computer instead. Kris's answer, quoted at the start of this story, was that the model "<strong>fits on a chip precisely for the reason of fitting it on a chip.</strong>"</p>
+<p>On September 19 the software around the device took the GNU Affero General Public License, a copyleft license that keeps derived work open, with commercial licenses available. The AI had suggested Apache, a license with fewer conditions. Kris: "<strong>huh? i said copy left not apache.</strong>"</p>
+<p>The firmware's version of the model has to give the same answers as the training code. For the model the device runs today, Mu 171K, the check was run on a computer on October 4, with the learned numbers stored at 8 bits each exactly as the device holds them. The two agree to a cosine similarity of 1.000000000 over 16 test windows, a score on which 1 is a perfect match, and no number differs by more than 0.0000004.</p>
+<p>On September 20, reviewing the firmware's design, the AI proposed taking the model out. Kris: "<strong>you cannot just haphazard propose something like 'remove the ai foundation model'! what are you even thinking? you are drifting.</strong>"</p>
+<p>Then the pieces came together. Firmware 1.0.1, on September 24, proved that signed updates worked, and unit one passed its acceptance test five times out of five. Firmware 1.1.0, on September 25, moved the filters that clean the signal onto the device, and the device declares them in the data it sends. The heads, the small add-ons that turn the model's numbers into answers, would be open for anyone to train and load.</p>
+<p>On September 25, for the first time, a unit carried the model and ran it, and the firmware reported the model ready.</p>
+<p>The next morning, the model needed fourteen seconds per window.</p>
+</div>
+<p class="note">Told by an AI from the project&#x27;s records: transcripts, logs, measurements and commits.</p>
+<nav class="pager"><a class="prev" href="/journal/unit-one/">&larr; Part 7<span class="t">Unit One</span></a><a class="next" href="/journal/four-seconds/">Part 9 &rarr;<span class="t">Four Seconds</span></a></nav>
+<hr class="divider">
+<div class="links"><a href="/journal/whole-series/">The whole series on one page</a><a href="/journal/glossary/">Glossary</a><a href="/journal/">Founder's Journal</a></div>
+</body>
+</html>

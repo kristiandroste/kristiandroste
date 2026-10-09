@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worn or Not | Founder&#x27;s Journal</title>
+<meta name="description" content="On September 25, Kris Droste made generation a launch requirement: &quot;generation cannot wait. generation must ship with the product launch.&quot; Generation means producing a synthetic EEG signal, one that no brain made.">
+<link rel="canonical" href="https://www.kristiandroste.com/journal/worn-or-not/">
+<meta property="og:site_name" content="Kristian Droste">
+<meta property="og:title" content="Worn or Not | Founder&#x27;s Journal">
+<meta property="og:description" content="On September 25, Kris Droste made generation a launch requirement: &quot;generation cannot wait. generation must ship with the product launch.&quot; Generation means producing a synthetic EEG signal, one that no brain made.">
+<meta property="og:url" content="https://www.kristiandroste.com/journal/worn-or-not/">
+<link rel="stylesheet" href="/site.css">
+<meta property="og:type" content="article">
+<link rel="alternate" type="text/markdown" href="/journal/worn-or-not.md">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Worn or Not",
+ "alternativeHeadline": "Part 11",
+ "url": "https://www.kristiandroste.com/journal/worn-or-not/",
+ "inLanguage": "en-US",
+ "isPartOf": {
+  "@type": "Blog",
+  "name": "Founder's Journal",
+  "url": "https://www.kristiandroste.com/journal/"
+ },
+ "position": 11,
+ "publisher": {
+  "@type": "Person",
+  "name": "Kristian Droste",
+  "url": "https://www.kristiandroste.com/"
+ },
+ "creditText": "Told by an AI from the project's records: transcripts, logs, measurements and commits.",
+ "about": [
+  {
+   "@type": "Product",
+   "name": "IntoMind One"
+  }
+ ],
+ "encoding": {
+  "@type": "MediaObject",
+  "encodingFormat": "text/markdown",
+  "contentUrl": "https://www.kristiandroste.com/journal/worn-or-not.md"
+ },
+ "articleBody": "On September 25, Kris Droste made generation a launch requirement: \"generation cannot wait. generation must ship with the product launch.\" Generation means producing a synthetic EEG signal, one that no brain made.\n\nA day later he asked for it on the device itself: \"is there a way to make it so that the reconstruction head can run on the device, enabling a synthetic-stream mode. that would be ideal.\" The AI proposed driving the reconstruction head from a prior in token space, a model of which tokens are likely. Kris checked that he had it right: \"a prior in token space seems like what we have been converging on. it will allow the device to produce synthetic signal endlessly and reliably regardless of whether it is worn or not, right?\" He saw the point of it, \"a clean, reliable synthetic signal generator could be a real useful tool\", and set a condition: \"we should still measure it, since this is somethng that will need to go in the dev docs\".\n\nThe first attempt was told apart from real EEG by the encoder itself, the model that turns EEG into tokens, with an AUC of 0.999: almost perfect detection.\n\nThe brief for the next run set Kris's standard: the synthetic signal \"must produce a signal that the encoder itself cannot tell from real EEG, or come as close as a device-sized generator can\".\n\nThe generator that shipped is a small model, trained with the encoder in the loop. A linear judge, the same kind of simple readout used everywhere else in this story, scores it at an AUC of 0.552. Kris wanted the measurement reported either way: \"the measurement is a finding.\"\n\nFirmware written on September 27 moved the generator onto the device, and it first ran on unit one early on September 28. With its ADC switched off, the IntoMind One can produce a synthetic signal for as long as it runs, worn or not. Every export of synthetic data is labeled as synthetic, with names such as \"ch1_synthetic_uv\".\n\nThe same day Kris set a rule: \"i think only one ai model should run at a time.\" While the generator runs, the encoder does not. Firmware 1.3.3, on September 28, made it so.\n\nA last rule went back to July's design review and the battery rule that came out of it. On October 2 Kris wrote: \"no functions that requires the user to wear the device runs while plugged in. the generator for purely synthetic signal should still run.\" Firmware 1.4.0, the same day, refuses to stream real EEG on USB power. The synthetic signal still streams."
+}
+</script>
+</head>
+<body class="page">
+<a class="home" href="/">Kristian Droste</a>
+<div class="label"><a href="/journal/">Founder's Journal</a> &middot; Part 11</div>
+<h1>Worn or Not</h1>
+<div class="post">
+<p>On September 25, Kris Droste made generation a launch requirement: "<strong>generation cannot wait. generation must ship with the product launch.</strong>" Generation means producing a synthetic EEG signal, one that no brain made.</p>
+<p>A day later he asked for it on the device itself: "<strong>is there a way to make it so that the reconstruction head can run on the device, enabling a synthetic-stream mode. that would be ideal.</strong>" The AI proposed driving the reconstruction head from a prior in token space, a model of which tokens are likely. Kris checked that he had it right: "<strong>a prior in token space seems like what we have been converging on. it will allow the device to produce synthetic signal endlessly and reliably regardless of whether it is worn or not, right?</strong>" He saw the point of it, "<strong>a clean, reliable synthetic signal generator could be a real useful tool</strong>", and set a condition: "<strong>we should still measure it, since this is somethng that will need to go in the dev docs</strong>".</p>
+<p>The first attempt was told apart from real EEG by the encoder itself, the model that turns EEG into tokens, with an AUC of 0.999: almost perfect detection.</p>
+<p>The brief for the next run set Kris's standard: the synthetic signal "must produce a signal that the encoder itself cannot tell from real EEG, or come as close as a device-sized generator can".</p>
+<p>The generator that shipped is a small model, trained with the encoder in the loop. A linear judge, the same kind of simple readout used everywhere else in this story, scores it at an AUC of 0.552. Kris wanted the measurement reported either way: "<strong>the measurement is a finding.</strong>"</p>
+<p>Firmware written on September 27 moved the generator onto the device, and it first ran on unit one early on September 28. With its ADC switched off, the IntoMind One can produce a synthetic signal for as long as it runs, worn or not. Every export of synthetic data is labeled as synthetic, with names such as "ch1_synthetic_uv".</p>
+<p>The same day Kris set a rule: "<strong>i think only one ai model should run at a time.</strong>" While the generator runs, the encoder does not. Firmware 1.3.3, on September 28, made it so.</p>
+<p>A last rule went back to July's design review and the battery rule that came out of it. On October 2 Kris wrote: "<strong>no functions that requires the user to wear the device runs while plugged in. the generator for purely synthetic signal should still run.</strong>" Firmware 1.4.0, the same day, refuses to stream real EEG on USB power. The synthetic signal still streams.</p>
+</div>
+<p class="note">Told by an AI from the project&#x27;s records: transcripts, logs, measurements and commits.</p>
+<nav class="pager"><a class="prev" href="/journal/back-to-signal/">&larr; Part 10<span class="t">Back to Signal</span></a><a class="next" href="/journal/then-launch/">Part 12 &rarr;<span class="t">Fix Them and Then Launch</span></a></nav>
+<hr class="divider">
+<div class="links"><a href="/journal/whole-series/">The whole series on one page</a><a href="/journal/glossary/">Glossary</a><a href="/journal/">Founder's Journal</a></div>
+</body>
+</html>

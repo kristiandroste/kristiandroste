@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Teacher | Founder&#x27;s Journal</title>
+<meta name="description" content="The teacher is the largest model in this story: 17.8 million parameters.">
+<link rel="canonical" href="https://www.kristiandroste.com/journal/the-teacher/">
+<meta property="og:site_name" content="Kristian Droste">
+<meta property="og:title" content="The Teacher | Founder&#x27;s Journal">
+<meta property="og:description" content="The teacher is the largest model in this story: 17.8 million parameters.">
+<meta property="og:url" content="https://www.kristiandroste.com/journal/the-teacher/">
+<link rel="stylesheet" href="/site.css">
+<meta property="og:type" content="article">
+<link rel="alternate" type="text/markdown" href="/journal/the-teacher.md">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "The Teacher",
+ "alternativeHeadline": "Part 4",
+ "url": "https://www.kristiandroste.com/journal/the-teacher/",
+ "inLanguage": "en-US",
+ "isPartOf": {
+  "@type": "Blog",
+  "name": "Founder's Journal",
+  "url": "https://www.kristiandroste.com/journal/"
+ },
+ "position": 4,
+ "publisher": {
+  "@type": "Person",
+  "name": "Kristian Droste",
+  "url": "https://www.kristiandroste.com/"
+ },
+ "creditText": "Told by an AI from the project's records: transcripts, logs, measurements and commits.",
+ "about": [
+  {
+   "@type": "Product",
+   "name": "IntoMind Mu"
+  }
+ ],
+ "encoding": {
+  "@type": "MediaObject",
+  "encodingFormat": "text/markdown",
+  "contentUrl": "https://www.kristiandroste.com/journal/the-teacher.md"
+ },
+ "articleBody": "The teacher is the largest model in this story: 17.8 million parameters. It learned without labels, that is, without being told anything about the people in the recordings. Each four-second window was cut into short pieces, half of the pieces were hidden, and the model was trained to fill in what was hidden from what was left. To do that well, a model has to capture how EEG behaves.\n\nTraining ran on the graphics card from July 30 to July 31: 300,000 training steps, each on 96 windows, 15.9 hours in all. In that time the model saw 28.8 million windows, more than eight passes over 3,432,863 training windows recorded from 4,945 people. Each window covered up to 19 positions on the scalp, and at least 15 had to be working.\n\nThere were things it never saw. Recordings made at fewer than 500 samples per second, 30.4 percent of the windows, were left out. And 32.8 million event markers in the recordings, notes of what was happening when, were never read.\n\nWhile it was still training, Kris Droste asked a question that would shape everything after: \"would this model fit on a nrf52840 in the firmware? and run there realtime?\" The answer was no. It was about 18 times too large and 60 times too slow.\n\nFirst, though, it had to show that it had learned anything useful. The way to ask is a probe: leave the model unchanged, train a simple linear readout on the numbers it produces, test that readout on studies held out from its training, and run band power through exactly the same test.\n\nThe test the AI proposed was age and sex. They are recorded in study after study, and they are facts rather than one lab's judgment: \"the labels we have in quantity, across many studies, and they're objective rather than one lab's vocabulary.\" Kris agreed, with a reminder: \"yes we should definitely test age and sex on the current model ... this is a general purpose foundation model we are building.\"\n\nThe results: asked to tell women from men, using one averaged description per person, the readout on the model's numbers scored an AUC of 0.773, against 0.660 for band power, and the model won in 99 of 122 test groups. AUC measures how well a test separates two groups: 0.5 is a coin toss, and 1.0 is perfect. On age, its typical error was 8.52 years, against 9.63 for band power. That difference did not hold up once the number of tests was accounted for, except among adults alone.\n\nTwo days later the AI put the situation in one sentence: \"the only two things this program can currently measure with real statistical power are age and sex.\" Statistical power is the ability to detect a real effect. About 150 studies in the corpus recorded each of them, with both sexes or a spread of ages inside the same study.\n\nThat is why the IntoMind Mu models are measured on age and sex. Age and sex were never the goal. They were the only questions the public data could answer with confidence."
+}
+</script>
+</head>
+<body class="page">
+<a class="home" href="/">Kristian Droste</a>
+<div class="label"><a href="/journal/">Founder's Journal</a> &middot; Part 4</div>
+<h1>The Teacher</h1>
+<div class="post">
+<p>The teacher is the largest model in this story: 17.8 million parameters. It learned without labels, that is, without being told anything about the people in the recordings. Each four-second window was cut into short pieces, half of the pieces were hidden, and the model was trained to fill in what was hidden from what was left. To do that well, a model has to capture how EEG behaves.</p>
+<p>Training ran on the graphics card from July 30 to July 31: 300,000 training steps, each on 96 windows, 15.9 hours in all. In that time the model saw 28.8 million windows, more than eight passes over 3,432,863 training windows recorded from 4,945 people. Each window covered up to 19 positions on the scalp, and at least 15 had to be working.</p>
+<p>There were things it never saw. Recordings made at fewer than 500 samples per second, 30.4 percent of the windows, were left out. And 32.8 million event markers in the recordings, notes of what was happening when, were never read.</p>
+<p>While it was still training, Kris Droste asked a question that would shape everything after: "<strong>would this model fit on a nrf52840 in the firmware? and run there realtime?</strong>" The answer was no. It was about 18 times too large and 60 times too slow.</p>
+<p>First, though, it had to show that it had learned anything useful. The way to ask is a probe: leave the model unchanged, train a simple linear readout on the numbers it produces, test that readout on studies held out from its training, and run band power through exactly the same test.</p>
+<p>The test the AI proposed was age and sex. They are recorded in study after study, and they are facts rather than one lab's judgment: "the labels we have in quantity, across many studies, and they're objective rather than one lab's vocabulary." Kris agreed, with a reminder: "<strong>yes we should definitely test age and sex on the current model ... this is a general purpose foundation model we are building.</strong>"</p>
+<p>The results: asked to tell women from men, using one averaged description per person, the readout on the model's numbers scored an AUC of 0.773, against 0.660 for band power, and the model won in 99 of 122 test groups. AUC measures how well a test separates two groups: 0.5 is a coin toss, and 1.0 is perfect. On age, its typical error was 8.52 years, against 9.63 for band power. That difference did not hold up once the number of tests was accounted for, except among adults alone.</p>
+<p>Two days later the AI put the situation in one sentence: "the only two things this program can currently measure with real statistical power are age and sex." Statistical power is the ability to detect a real effect. About 150 studies in the corpus recorded each of them, with both sexes or a spread of ages inside the same study.</p>
+<p>That is why the IntoMind Mu models are measured on age and sex. Age and sex were never the goal. They were the only questions the public data could answer with confidence.</p>
+</div>
+<p class="note">Told by an AI from the project&#x27;s records: transcripts, logs, measurements and commits.</p>
+<nav class="pager"><a class="prev" href="/journal/no-fake-data/">&larr; Part 3<span class="t">No Fake Data</span></a><a class="next" href="/journal/eyes-closed/">Part 5 &rarr;<span class="t">Eyes Closed</span></a></nav>
+<hr class="divider">
+<div class="links"><a href="/journal/whole-series/">The whole series on one page</a><a href="/journal/glossary/">Glossary</a><a href="/journal/">Founder's Journal</a></div>
+</body>
+</html>

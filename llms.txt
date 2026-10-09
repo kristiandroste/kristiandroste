@@ -1,0 +1,23 @@
+# Kristian Droste
+
+> I create things at the intersection of computers and brains.
+
+## Founder's Journal
+
+How the IntoMind One and the IntoMind Mu models were built, from the project's records. Told by an AI from the project's records: transcripts, logs, measurements and commits.
+
+- [Fourteen Seconds](https://www.kristiandroste.com/journal/fourteen-seconds.md): Prologue
+- [Other People's EEG](https://www.kristiandroste.com/journal/other-peoples-eeg.md): Part 1
+- [The Only Board](https://www.kristiandroste.com/journal/the-only-board.md): Part 2
+- [No Fake Data](https://www.kristiandroste.com/journal/no-fake-data.md): Part 3
+- [The Teacher](https://www.kristiandroste.com/journal/the-teacher.md): Part 4
+- [Eyes Closed](https://www.kristiandroste.com/journal/eyes-closed.md): Part 5
+- [The Student](https://www.kristiandroste.com/journal/the-student.md): Part 6
+- [Unit One](https://www.kristiandroste.com/journal/unit-one.md): Part 7
+- [Model Ready](https://www.kristiandroste.com/journal/model-ready.md): Part 8
+- [Four Seconds](https://www.kristiandroste.com/journal/four-seconds.md): Part 9
+- [Back to Signal](https://www.kristiandroste.com/journal/back-to-signal.md): Part 10
+- [Worn or Not](https://www.kristiandroste.com/journal/worn-or-not.md): Part 11
+- [Fix Them and Then Launch](https://www.kristiandroste.com/journal/then-launch.md): Part 12
+- [The whole series](https://www.kristiandroste.com/journal/whole-series.md): every installment and the glossary in one file
+- [Glossary](https://www.kristiandroste.com/journal/glossary.md): the words used in the series
