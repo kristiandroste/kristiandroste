@@ -21,3 +21,9 @@ How the IntoMind One and the IntoMind Mu models were built, from the project's r
 - [Fix Them and Then Launch](https://www.kristiandroste.com/journal/then-launch.md): Part 12
 - [The whole series](https://www.kristiandroste.com/journal/whole-series.md): every installment and the glossary in one file
 - [Glossary](https://www.kristiandroste.com/journal/glossary.md): the words used in the series
+
+## Writing
+
+Kristian Droste's own writing, in his words.
+
+- [Revelation to Revolution](https://www.kristiandroste.com/writing/revolutions.md): The founding of IntoMind and Neuroscientific Labs
